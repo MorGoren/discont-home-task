@@ -100,16 +100,19 @@ extension SportAndEntrtainmentViewController: UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let webView = WebViewController()
+        var link: String = .empty
         switch indexPath.section {
         case 0:
-            guard let link = tabelSportData?[indexPath.row].link else { return }
-            webView.openLink(stringUrl: link)
+            guard let sportLink = tabelSportData?[indexPath.row].link else { return }
+            link = sportLink
         case 1:
-            guard let link = tabelEntrtainmentData?[indexPath.row].link else { return }
-            webView.openLink(stringUrl: link)
+            guard let entrtainmentLink = tabelEntrtainmentData?[indexPath.row].link else { return }
+            link = entrtainmentLink
         default: break
         }
         
+        lastLink = link
+        webView.openLink(stringUrl: link)
         self.present(webView, animated: true)
     }
 }

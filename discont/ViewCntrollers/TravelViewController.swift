@@ -72,6 +72,7 @@ extension TravelViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let arrayIndex = indexPath.row + indexPath.section
         
         guard let link = collectionData?[arrayIndex].link else { return }
+        lastLink = link
         webView.openLink(stringUrl: link)
         self.present(webView, animated: true)
     }

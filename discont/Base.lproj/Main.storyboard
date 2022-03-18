@@ -48,34 +48,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GOU-0E-qxT">
-                                <rect key="frame" x="103.5" y="394" width="207" height="162.5"/>
+                                <rect key="frame" x="103.5" y="388.5" width="207" height="173"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mor Miahrin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUp-e1-HQM">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKb-Ju-IdF">
                                         <rect key="frame" x="0.0" y="30.5" width="207" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.3829135000705719" green="0.34198975563049316" blue="0.90919691324234009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOW-mw-O1D">
                                         <rect key="frame" x="0.0" y="61" width="207" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.3829135000705719" green="0.34198975563049316" blue="0.90919691324234009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJL-Go-lBP">
-                                        <rect key="frame" x="0.0" y="101" width="207" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqc-tW-mmn">
+                                        <rect key="frame" x="0.0" y="101" width="207" height="31"/>
+                                        <color key="backgroundColor" red="0.3829135000705719" green="0.34198975563049316" blue="0.90919691324234009" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="openLink:" destination="4Th-9k-lVS" eventType="touchUpInside" id="vVd-eR-QQR"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doZ-ms-XKd">
-                                        <rect key="frame" x="0.0" y="131.5" width="207" height="31"/>
+                                        <rect key="frame" x="0.0" y="142" width="207" height="31"/>
+                                        <color key="backgroundColor" red="0.3829135000705719" green="0.34198975563049316" blue="0.90919691324234009" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="5zW-2Y-0qj"/>
                                         </constraints>
@@ -100,7 +105,7 @@
                     <connections>
                         <outlet property="clock" destination="rOW-mw-O1D" id="3FV-hz-lw9"/>
                         <outlet property="date" destination="uKb-Ju-IdF" id="yv2-mG-2mf"/>
-                        <outlet property="link" destination="mJL-Go-lBP" id="bHT-P5-cRj"/>
+                        <outlet property="linkButton" destination="fqc-tW-mmn" id="b79-Mp-JAb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSN-go-3fB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -110,7 +115,6 @@
         <!--Navigation Controller-->
         <scene sceneID="BpS-qL-Z8f">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UQx-OR-khn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="0DJ-eD-uq9" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1eg-yw-7Lc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -120,6 +124,7 @@
                         <segue destination="4Th-9k-lVS" kind="relationship" relationship="rootViewController" id="TEJ-EN-3l5"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQx-OR-khn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3368" y="-220"/>
         </scene>
@@ -201,6 +206,9 @@
         <image name="sportscourt" catalog="system" width="128" height="84"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

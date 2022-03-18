@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+var lastLink: String = .empty
+
 extension String {
     static let empty = ""
 }
