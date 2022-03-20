@@ -26,6 +26,7 @@
 		213AD14D27E38E8D00D26648 /* SportAndEntrtainmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213AD14B27E38E8D00D26648 /* SportAndEntrtainmentCell.xib */; };
 		213AD15027E3920500D26648 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213AD14F27E3920500D26648 /* HeaderCell.swift */; };
 		213AD15227E3920E00D26648 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213AD15127E3920E00D26648 /* HeaderCell.xib */; };
+		2180236227E713BA0018EF92 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180236127E713BA0018EF92 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		213AD14B27E38E8D00D26648 /* SportAndEntrtainmentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SportAndEntrtainmentCell.xib; sourceTree = "<group>"; };
 		213AD14F27E3920500D26648 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		213AD15127E3920E00D26648 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		2180236127E713BA0018EF92 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				210689B127E3A74000861B22 /* Shimmering */,
 				213AD13D27E3390F00D26648 /* Extensions.swift */,
 				213AD13B27E336C500D26648 /* XMLPraser.swift */,
+				2180236127E713BA0018EF92 /* GradientView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				213AD14327E341C100D26648 /* TravelCell.swift in Sources */,
 				213AD13C27E336C500D26648 /* XMLPraser.swift in Sources */,
 				210689B027E3A43D00861B22 /* WebViewController.swift in Sources */,
+				2180236227E713BA0018EF92 /* GradientView.swift in Sources */,
 				213AD12C27E334E600D26648 /* TravelViewController.swift in Sources */,
 				213AD15027E3920500D26648 /* HeaderCell.swift in Sources */,
 				210689B427E3A74D00861B22 /* FAShimmerView.swift in Sources */,
@@ -403,6 +407,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -431,6 +436,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

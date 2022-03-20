@@ -22,6 +22,7 @@ class SportAndEntrtainmentViewController: UIViewController {
         title = "Sport and Entrtainment"
         
         setTabel()
+        self.fetchData()
         Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: {_ in
             self.fetchData()
         })
@@ -90,7 +91,7 @@ extension SportAndEntrtainmentViewController: UITableViewDelegate, UITableViewDa
             }
         case 1:
             if let data = tabelEntrtainmentData?[indexPath.row] {
-                cell.setData(data: data, backgroundColor: UIColor(red: 88/255, green: 214/255, blue: 86/255, alpha: 1))
+                cell.setData(data: data, backgroundColor: UIColor(red: 88/255, green: 214/255, blue: 86/255, alpha: 0.2))
             }
         default: break
         }

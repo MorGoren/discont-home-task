@@ -16,6 +16,7 @@ class TravelCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.setShadow()
     }
 
     func setData(data: RssItem) {

@@ -17,24 +17,29 @@ class IntoViewController: UIViewController {
         super.viewDidLoad()
 
         linkButton.titleLabel?.text = .empty
+        linkButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        linkButton.titleLabel?.numberOfLines = 0
         title = "Intro Page"
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            let date = Date()
-            let dateFormatter = DateFormatter()
-            
-            dateFormatter.dateFormat = "hh:MM:ss a"
-            self.clock.text = dateFormatter.string(from: date)
-            
-            dateFormatter.dateFormat = "dd/MM/yyyy"
-            self.date.text = dateFormatter.string(from: date)
+        setTime()
+        Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
+            self.setTime()
         }
     }
     
+    private func setTime() {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "hh:MM a"
+        self.clock.text = dateFormatter.string(from: date)
+        
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        self.date.text = dateFormatter.string(from: date)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        linkButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        linkButton.titleLabel?.numberOfLines = 0
-        linkButton.titleLabel?.text = lastLink
+        linkButton.setTitle(lastLink, for: .normal)
         linkButton.isHidden = lastLink.isEmpty
     }
     

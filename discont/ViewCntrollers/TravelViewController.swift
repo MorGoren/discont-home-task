@@ -20,6 +20,7 @@ class TravelViewController: UIViewController {
         title = "Travel"
         
         setCollection()
+        self.fetchData()
         Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: {_ in
             self.fetchData()
         })
@@ -43,14 +44,14 @@ class TravelViewController: UIViewController {
     }
 }
 
-extension TravelViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension TravelViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (self.collectionData?.count ?? 4) / 2
+        return (self.collectionData?.count ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -59,12 +60,6 @@ extension TravelViewController: UICollectionViewDelegate, UICollectionViewDataSo
             cell.setData(data: data)
         }
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collection.bounds.width - 10) / 2
-        let height = (collection.bounds.height - 10) / 4
-            return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -77,4 +72,3 @@ extension TravelViewController: UICollectionViewDelegate, UICollectionViewDataSo
         self.present(webView, animated: true)
     }
 }
-
